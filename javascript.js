@@ -55,6 +55,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 var user = "";
 var calories = "";
 var notes = "";
+var temp = "";
 
 $("button").on("click", function (event) {
 
@@ -67,9 +68,25 @@ $("button").on("click", function (event) {
     calories = $("#userCalories").val().trim();
     notes = $("#userNotes").val().trim();
 
-    var temp = {
+    temp = {
+        User: user,
+        Calories: calories,
+        Notes: notes
 
     }
 
+    database.ref().push(temp);
 })
+
+
+database.ref().on("child_added", function (childSnaphot) {
+    $("#tablebody").append($("<tr><td>"
+        + childSnaphot.val().User + "</td><td>"
+        + childSnaphot.val().Calories + "</td><td>"
+        + childSnaphot.val().Notes
+        + "</td></tr>"))
+
+});
+
+
 
