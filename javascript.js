@@ -1,3 +1,16 @@
+// Initialize Firebase
+var config = {
+    apiKey: "AIzaSyBBmBBRUZAr5nK4iW39KtxrjXiUPWyW1eQ",
+    authDomain: "project1-testdev.firebaseapp.com",
+    databaseURL: "https://project1-testdev.firebaseio.com",
+    projectId: "project1-testdev",
+    storageBucket: "",
+    messagingSenderId: "128017361927"
+};
+firebase.initializeApp(config);
+
+var database = firebase.database();
+
 // FirebaseUI config.
 var uiConfig = {
     signInSuccessUrl: '<url-to-redirect-to-on-success>',
@@ -13,3 +26,4 @@ var uiConfig = {
 var ui = new firebaseui.auth.AuthUI(firebase.auth());
 // The start method will wait until the DOM is loaded.
 ui.start('#firebaseui-auth-container', uiConfig);
+
