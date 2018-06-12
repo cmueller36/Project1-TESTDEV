@@ -11,12 +11,12 @@
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.0.0/firebaseui.css" />
 
     <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
-<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
 </head>
 
 <body>
-        <div id="firebaseui-auth-container"></div>
- 
+    <div id="firebaseui-auth-container"></div>
+
     <form>
         <div class="form-group">
             <label for="exampleInputEmail1">User</label>
@@ -30,16 +30,16 @@
             <label for="exampleInputPassword1">Notes</label>
             <input id="userNotes" class="form-control" type="text" placeholder="Default input">
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button id="submit" type="submit" class="btn btn-primary">Submit</button>
     </form>
 
 
     <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="card" style="width: 100%;">
-                        <div class="card-body">
-                            <h2 class="card-title">Daily>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card" style="width: 100%;">
+                    <div class="card-body">
+                        <h2 class="card-title">Daily>
                             <table class="table">
                                 <thead>
                                     <tr>
@@ -51,11 +51,14 @@
                                 <tbody id="tablebody">
                                 </tbody>
                             </table>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+
+    <button id="logout" type="submit" class="btn btn-danger">Logout</button>
+    <a href="login.html" class="btn btn-danger" role="button">Login</a>
 
 
 
